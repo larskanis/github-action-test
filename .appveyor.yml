@@ -1,3 +1,4 @@
+image: Visual Studio 2019
 install:
   - SET PATH=C:\Ruby%RUBYVER%\bin;%PATH%
   - ridk version
@@ -6,5 +7,5 @@ test_script:
   - ruby print_enc.rb abc äöüЖあ𝄞
 environment:
   matrix:
-    - RUBYVER: 25
     - RUBYVER: 27-x64
+    - RUBYVER: 25
