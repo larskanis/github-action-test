@@ -44,7 +44,7 @@ exec "STDIN.internal_encoding"
 exec "STDOUT.external_encoding"
 exec "STDOUT.internal_encoding"
 exec "ARGV.map{|s| [s, s&.encoding.name] }"
-exec "[ENV['USERNAME'], ENV['TESTUNICODE1'], ENV['TESTUNICODE2']].map{|s| [s, s&.encoding.name] }"
+exec "[ENV['USERNAME'], ENV['TESTUNICODE1'], ENV['TESTUNICODE2']].map{|s| [s, s&.encoding&.name] }"
 
 Dir["abc*.enco"].each{|f| File.unlink(f) }
 print "puts ustr : "; puts ustr
