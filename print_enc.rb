@@ -34,6 +34,7 @@ ustr = "\u00E4\u0416\u{3042}\u{1d11e}"  # äЖあ𝄞
 ENV['TESTUNICODE1'] = "abcäöü"
 ENV['TESTUNICODE2'] = ustr
 
+exec "ENV['RUBYOPT']"
 exec "__ENCODING__"
 exec "Encoding.default_external"
 exec "Encoding.default_internal"
