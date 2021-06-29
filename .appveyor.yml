@@ -7,5 +7,6 @@ test_script:
   - ruby print_enc.rb abc äöüЖあ𝄞
 environment:
   matrix:
+    - RUBYVER: 30-x64
     - RUBYVER: 27-x64
     - RUBYVER: 25
