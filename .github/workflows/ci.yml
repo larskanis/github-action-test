@@ -18,7 +18,16 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    
+
+    - name: Print PATH (non-Windows)
+      if: matrix.os != 'windows'
+      run: echo $PATH
+
+    - name: Print PATH (Windows)
+      if: matrix.os == 'windows'
+      shell: cmd
+      run: echo %PATH%
+
     - run: ruby -v
 
     - name: Print rubyinstaller info
